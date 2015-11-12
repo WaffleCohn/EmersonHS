@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Emerson HS | Staff</title>
+    </head>
+    
+    <body>
+        <div class="container main">
+            <div class="section">
+                <div class="row">
+                    <!--<img class="center-block header-img" src="http://todaymade.com/blog/wp-content/uploads/2013/03/evergreen-2.jpg" />-->
+                    <div class="col-sm-12">
+                        <img class="center-block header-img" src="evergreen-4.png" />
+                    </div>
+                </div>
+                
+                <div class="row top-nav">
+                    <div class="col-sm-12">
+                        <a href="index.html">
+                        <button class="btn nav-btn"><span class="lead" style="font-size: 18px">Home</span></button>
+                        </a>
+                        <a href="aesthetics.html">
+                            <button class="btn nav-btn"><span class="lead" style="font-size: 18px">Aesthetics</span></button>
+                        </a>
+                        <a href="counseling.html">
+                            <button class="btn nav-btn"><span class="lead" style="font-size: 18px">Counseling</span></button>
+                        </a>
+                        <a href="curriculum.html">
+                            <button class="btn nav-btn"><span class="lead" style="font-size: 18px">Curriculum</span></button>
+                        </a>
+                        <a href="staff.html">
+                            <button class="btn nav-btn last-btn"><span class="lead" style="font-size: 18px">Staff</span></button>
+                        </a>
+                    </div>
+                </div>
+                        
+                <div class="section">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                        
+                <div class="row" style="margin: 15px;">
+                    <!-- Left Nav Bar -->
+                    <div class="col-sm-2 left-nav">
+                        <a href="#about" style="color: white">
+                            <p class="lead" style="font-size: 18px">Link</p>
+                        </a>
+                    </div>
+                            
+                    <!-- Main Area -->
+                    <div class="col-sm-8 center-col">
+                        <div class="section">
+                            
+                            <!-- About -->
+                            <a name="about"></a>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead header">Header</p>
+                                </div>
+                                <div class="col">
+                                    <p class="lead body">
+                                        Body paragraph
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                            
+                    <!-- Right Bar -->
+                    <div class="col-sm-2 right-nav">
+                                
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <script type="text/javascript">
+            var leftNav = document.getElementsByClassName("left-nav")[0];
+            var mainBody = document.getElementsByClassName("center-col")[0];
+            leftNav.style.height = mainBody.offsetHeight + "px";
+        </script>
+    </body>
+</html>
