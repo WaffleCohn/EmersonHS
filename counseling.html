@@ -56,7 +56,7 @@
                         <a href="#tracking" style="color: white">
                             <p class="lead" style="font-size: 18px">Grades and Tracking</p>
                         </a><a href="#punishments" style="color: white">
-                            <p class="lead" style="font-size: 18px">Punishments</p>
+                            <p class="lead" style="font-size: 18px">Discipline</p>
                         </a>
                         <a href="#graduation-plans" style="color: white">
                             <p class="lead" style="font-size: 18px">Sample Graduation Plans</p>
@@ -126,6 +126,10 @@
                                                             <td>1 semester of either Computer Science or Computer Essentials</td>
                                                         </tr>
                                                         <tr>
+                                                            <td>P.E.</td>
+                                                            <td>One semester of P.E. or athletics</td>
+                                                        </tr>
+                                                        <tr>
                                                             <td>Health and Speech</td>
                                                             <td>One semester of Health and Speech each</td>
                                                         </tr>
@@ -166,11 +170,11 @@
                             <a name="punishments"></a>
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead header">Punishments</p>
+                                    <p class="lead header">Discipline</p>
                                 </div>
                                 <div class="col">
                                     <p class="lead body">
-                                        Punishment at Emerson High School is aimed at reforming the student. While traditional punishments such as detention and suspension are still administered, students may also face a parent/teacher conference to discuss their misbehavior and/or community service assigned to make up for their erroneous decisions.
+                                        Discipline at Emerson High School is aimed at reforming the student. While traditional punishments such as detention and suspension are still administered, students may also face a parent/teacher conference to discuss their misbehavior and/or community service assigned to make up for their erroneous decisions.
                                     </p>
                                 </div>
                             </div>
@@ -204,9 +208,9 @@
                                             <tr>
                                                 <td>Math</td>
                                                 <td>
-                                                    <table class="table table-condensed">
+                                                    <table class="table table-condensed inside-classes">
                                                         <tr>
-                                                            <td>Algebra Fundamentals</td>
+                                                            <td>Algebra I</td>
                                                             <td>Precalculus</td>
                                                         </tr>
                                                         <tr>
@@ -227,13 +231,13 @@
                                             <tr>
                                                 <td>Science</td>
                                                 <td>
-                                                    <table class="table table-condensed">
+                                                    <table class="table table-condensed inside-classes">
                                                         <tr>
                                                             <td>Biology</td>
                                                             <td>Environmental Science</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Chemistry&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                                            <td>Chemistry</td>
                                                             <td>Health Sciene</td>
                                                         </tr>
                                                         <tr>
@@ -246,7 +250,7 @@
                                             <tr>
                                                 <td>History</td>
                                                 <td>
-                                                    <table class="table table-condensed">
+                                                    <table class="table table-condensed inside-classes">
                                                         <tr>
                                                             <td>US History</td>
                                                             <td>Human Geography</td>
@@ -259,13 +263,17 @@
                                                             <td>European History</td>
                                                             <td>Art History</td>
                                                         </tr>
+                                                        <tr>
+                                                            <td>Historical Studies</td>
+                                                            <td></td>
+                                                        </tr>
                                                     </table>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>English</td>
                                                 <td>
-                                                    <table class="table table-condensed">
+                                                    <table class="table table-condensed inside-classes">
                                                         <tr>
                                                             <td>English I-IV</td>
                                                         </tr>
@@ -278,7 +286,7 @@
                                             <tr>
                                                 <td>Fine Arts</td>
                                                 <td>
-                                                    <table class="table table-condensed">
+                                                    <table class="table table-condensed inside-classes">
                                                         <tr>
                                                             <td>Band</td>
                                                             <td>Art (2D/3D)</td>
@@ -297,7 +305,7 @@
                                             <tr>
                                                 <td>Foreign Language</td>
                                                 <td>
-                                                    <table class="table table-condensed">
+                                                    <table class="table table-condensed inside-classes">
                                                         <tr>
                                                             <td>Spanish</td>
                                                             <td>American Sign Langauge</td>
@@ -312,6 +320,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td>Arabic</td>
+                                                            <td></td>
                                                         </tr>
                                                     </table>
                                                 </td>
@@ -319,7 +328,7 @@
                                             <tr>
                                                 <td>Athletics</td>
                                                 <td>
-                                                    <table class="table table-condensed">
+                                                    <table class="table table-condensed inside-classes">
                                                         <tr>
                                                             <td>Soccer</td>
                                                             <td>Tenis</td>
@@ -358,6 +367,18 @@
             var leftNav = document.getElementsByClassName("left-nav")[0];
             var mainBody = document.getElementsByClassName("center-col")[0];
             leftNav.style.height = mainBody.offsetHeight + "px";
+            
+            var insideClasses = document.querySelectorAll(".inside-classes td");
+            var maxWidth = 0;
+            for (i=0; i < insideClasses.length; i++)
+            {
+                maxWidth = (insideClasses[i].offsetWidth > maxWidth) ? insideClasses[i].offsetWidth : maxWidth;
+            }
+            
+            for (i=0; i < insideClasses.length; i++)
+            {
+                insideClasses[i].width = maxWidth + "px";
+            }
         </script>
     </body>
 </html>
